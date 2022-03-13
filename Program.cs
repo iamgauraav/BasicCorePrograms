@@ -2,29 +2,31 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC6-Program to Compute Quotient and Remainder 
+/// UC7-Program to Swap Two Numbers 
 /// </summary>
 
     class Program
     {
         static void Main(string[] args)
         {
-            //Taking input of dividend and divisior from user
-            Console.WriteLine("Enter Dividend=");
-            int div =Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Divisor=");
-            int divisor = Convert.ToInt32(Console.ReadLine());
-
             //local variable
-            int rem = 0;
-            int res = 0;
+            int temp;
 
-            res = div / divisor;
-            rem = div % divisor;
+            //Taking input from user
+            Console.WriteLine("Enter First=");
+            int first =int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Second=");
+            int second = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("{0} and {1} is the quotient and remainder of {2}" , +res, +rem, +div);
+            //Swaping value
+            temp = first;
+            first = second;
+            second = temp;
+
+            Console.WriteLine("\nAfter Swipping : ");
+            Console.WriteLine("\nFirst Number : " + first);
+            Console.WriteLine("\nSecond Number : " + second);
             Console.ReadLine();
-            
 
         }
     }
