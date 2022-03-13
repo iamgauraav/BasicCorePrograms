@@ -2,30 +2,40 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC4- Harmonic number 
+/// UC5-Find Prime Factor 
+/// 
 /// </summary>
 
     class Program
     {
         static void Main(string[] args)
         {
-            //Taking input from user
-            Console.WriteLine("Enter a  number");
+            //taking input from user
+            Console.WriteLine("Enter a number");
+            int num =Convert.ToInt32(Console.ReadLine());
+            //local variable
+            int isPrime;
 
-            //converting from string to int
-            int num =int.Parse(Console.ReadLine());
-
-            double sum = 0.0;
-
-            //For loop
-            for (double count = 1; count <= num; count++)    
+            for (int count = 2; count <=num; count++)
             {
-                Console.Write("1/{0} + ", count);
-                sum = sum + 1 / count;
+                if (num % count == 0)
+                {
+                    isPrime = 1;
+                    //checking divisible by 2 it is not a prime number
+                    for (int j = 2; j <= count/2; j++)
+                    {
+                        if(count % j ==0)
+                        {
+                            isPrime = 0;
+                            break;
+                        }
+                    }
+                    if (isPrime == 1)
+                    {
+                        Console.WriteLine("Prime Factor is : " + count);
+                    }
+                }
             }
-
-
-            Console.WriteLine("\nThe sum of {0}  seires is {1}  " , num, sum);
             Console.ReadLine();
         }
     }
