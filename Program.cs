@@ -2,41 +2,30 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC5-Find Prime Factor 
-/// 
+/// UC6-Program to Compute Quotient and Remainder 
 /// </summary>
 
     class Program
     {
         static void Main(string[] args)
         {
-            //taking input from user
-            Console.WriteLine("Enter a number");
-            int num =Convert.ToInt32(Console.ReadLine());
-            //local variable
-            int isPrime;
+            //Taking input of dividend and divisior from user
+            Console.WriteLine("Enter Dividend=");
+            int div =Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Divisor=");
+            int divisor = Convert.ToInt32(Console.ReadLine());
 
-            for (int count = 2; count <=num; count++)
-            {
-                if (num % count == 0)
-                {
-                    isPrime = 1;
-                    //checking divisible by 2 it is not a prime number
-                    for (int j = 2; j <= count/2; j++)
-                    {
-                        if(count % j ==0)
-                        {
-                            isPrime = 0;
-                            break;
-                        }
-                    }
-                    if (isPrime == 1)
-                    {
-                        Console.WriteLine("Prime Factor is : " + count);
-                    }
-                }
-            }
+            //local variable
+            int rem = 0;
+            int res = 0;
+
+            res = div / divisor;
+            rem = div % divisor;
+
+            Console.WriteLine("{0} and {1} is the quotient and remainder of {2}" , +res, +rem, +div);
             Console.ReadLine();
+            
+
         }
     }
 }
