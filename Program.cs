@@ -2,32 +2,26 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC7-Program to Swap Two Numbers 
+/// UC8-Program to Check Whether a Number is Even or Odd 
 /// </summary>
 
     class Program
     {
         static void Main(string[] args)
         {
-            //local variable
-            int temp;
-
             //Taking input from user
-            Console.WriteLine("Enter First=");
-            int first =int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Second=");
-            int second = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Number");
+            int num =int.Parse(Console.ReadLine());
 
-            //Swaping value
-            temp = first;
-            first = second;
-            second = temp;
-
-            Console.WriteLine("\nAfter Swipping : ");
-            Console.WriteLine("\nFirst Number : " + first);
-            Console.WriteLine("\nSecond Number : " + second);
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("The given Number is a Even number");
+            }
+            else
+            {
+                Console.WriteLine("The given Number is a Odd Number");
+            }
             Console.ReadLine();
-
         }
     }
 }
