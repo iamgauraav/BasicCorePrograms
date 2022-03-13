@@ -2,38 +2,32 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC9-Program to Check Whether an Alphabet is Vowel or Consonant
+/// UC10- Program to Find the Largest Among Three Numbers
 /// </summary>
 
     class Program
     {
         static void Main(string[] args)
         {
-            char ch;
-            Console.WriteLine("Input an Alphabet (A-Z 0r a-z)");
-            ch = Convert.ToChar(Console.ReadLine().ToLower());
-            int i = ch;
+            //input from user 
+            Console.WriteLine("Enter First number");
+            double first= Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter Second number");
+            double second = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter Third number");
+            double third = Convert.ToDouble(Console.ReadLine());
 
-            switch (ch)
+            if ((first > second) && (first > third))
             {
-                case 'a':
-                    Console.WriteLine("The alphabate is a vowel");
-                    break;
-                case 'e':
-                    Console.WriteLine("The alphabate is a vowel");
-                    break;
-                case 'i':
-                    Console.WriteLine("The alphabate is a vowel");
-                    break;
-                case 'o':
-                    Console.WriteLine("The alphabate is a vowel");
-                    break;
-                case 'u':
-                    Console.WriteLine("The alphabate is a vowel");
-                    break;
-                default:
-                    Console.WriteLine("The alphabate is a consonant");
-                    break;
+                Console.WriteLine("First is Largest");
+            }
+            else if ((second > first) && (second > third))
+            {
+                Console.WriteLine("Second is Largest");
+            }
+            else
+            {
+                Console.WriteLine("Third is largest");
             }
             Console.ReadLine();
         }
