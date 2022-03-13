@@ -2,26 +2,37 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC-2 Leap Year
+/// UC3- Power of 2
 /// </summary>
 
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter year..!!");        
-            int year=int.Parse(Console.ReadLine());
+            //Taking input from user
+            Console.WriteLine("Enter a  number");
 
-            //If-else selection statement
-            if((year % 4 ==0) && (year % 100 != 0) || (year % 400 ==0))     //checking for leap year 
+            //converting from string to int
+            int value =int.Parse(Console.ReadLine()); 
+
+            //For loop
+            for (int i = 1; i < value; i++)    
             {
-                Console.WriteLine("{0} is a leap year : " , year);
+                //Using math.pow method() to calculate power
+                //Power method(2,value) means 2 to the power value 
+                var pow = Math.Pow(2,value);    
+                if (0 <= value && value < 31)
+                {
+                    Console.WriteLine(pow);
+                }
+                else
+                {
+                    Console.WriteLine("Enter number from 1 to 31");
+                }
+                Console.ReadLine();
             }
-            else
-            {
-                Console.WriteLine("{0} is not leap year : " , year);
-            }
-            Console.ReadLine();
+
+         
         }
     }
 }
