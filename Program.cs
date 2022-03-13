@@ -2,24 +2,38 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC8-Program to Check Whether a Number is Even or Odd 
+/// UC9-Program to Check Whether an Alphabet is Vowel or Consonant
 /// </summary>
 
     class Program
     {
         static void Main(string[] args)
         {
-            //Taking input from user
-            Console.WriteLine("Enter Number");
-            int num =int.Parse(Console.ReadLine());
+            char ch;
+            Console.WriteLine("Input an Alphabet (A-Z 0r a-z)");
+            ch = Convert.ToChar(Console.ReadLine().ToLower());
+            int i = ch;
 
-            if (num % 2 == 0)
+            switch (ch)
             {
-                Console.WriteLine("The given Number is a Even number");
-            }
-            else
-            {
-                Console.WriteLine("The given Number is a Odd Number");
+                case 'a':
+                    Console.WriteLine("The alphabate is a vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine("The alphabate is a vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("The alphabate is a vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine("The alphabate is a vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine("The alphabate is a vowel");
+                    break;
+                default:
+                    Console.WriteLine("The alphabate is a consonant");
+                    break;
             }
             Console.ReadLine();
         }
