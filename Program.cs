@@ -2,7 +2,7 @@
 
 namespace BasicCorePrograms
 {/// <summary>
-/// UC3- Power of 2
+/// UC4- Harmonic number 
 /// </summary>
 
     class Program
@@ -13,26 +13,20 @@ namespace BasicCorePrograms
             Console.WriteLine("Enter a  number");
 
             //converting from string to int
-            int value =int.Parse(Console.ReadLine()); 
+            int num =int.Parse(Console.ReadLine());
+
+            double sum = 0.0;
 
             //For loop
-            for (int i = 1; i < value; i++)    
+            for (double count = 1; count <= num; count++)    
             {
-                //Using math.pow method() to calculate power
-                //Power method(2,value) means 2 to the power value 
-                var pow = Math.Pow(2,value);    
-                if (0 <= value && value < 31)
-                {
-                    Console.WriteLine(pow);
-                }
-                else
-                {
-                    Console.WriteLine("Enter number from 1 to 31");
-                }
-                Console.ReadLine();
+                Console.Write("1/{0} + ", count);
+                sum = sum + 1 / count;
             }
 
-         
+
+            Console.WriteLine("\nThe sum of {0}  seires is {1}  " , num, sum);
+            Console.ReadLine();
         }
     }
 }
